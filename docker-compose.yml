@@ -17,3 +17,13 @@ services:
       POSTGRES_PASSWORD: admin
     ports:
       - "5432:5432"
+
+  frontend:
+    build: ./frontend
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    ports:
+      - "5173:5173"
+    depends_on:
+      - web
