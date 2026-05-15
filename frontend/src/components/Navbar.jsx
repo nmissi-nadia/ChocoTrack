@@ -15,17 +15,20 @@ export default function Navbar() {
         ChocoTrack
       </div>
       <div className="navbar-links">
-        <Link to="/" className={`nav-link ${isActive('/')}`}>
+        <Link to="/admin-dashboard" className={`nav-link ${isActive('/admin-dashboard')}`}>
           <LayoutDashboard size={18} style={{ display: 'inline', marginRight: '6px', verticalAlign: 'text-bottom' }} />
           Tableau de bord
         </Link>
-        <Link to="/products" className={`nav-link ${isActive('/products')}`}>
+        <Link to="/admin-dashboard/products" className={`nav-link ${isActive('/admin-dashboard/products')}`}>
           <Cake size={18} style={{ display: 'inline', marginRight: '6px', verticalAlign: 'text-bottom' }} />
           Produits
         </Link>
-        <Link to="/orders" className={`nav-link ${isActive('/orders')}`}>
+        <Link to="/admin-dashboard/orders" className={`nav-link ${isActive('/admin-dashboard/orders')}`}>
           <ShoppingBag size={18} style={{ display: 'inline', marginRight: '6px', verticalAlign: 'text-bottom' }} />
           Commandes
+        </Link>
+        <Link to="/" className="nav-link" title="Retour au site public" style={{ borderLeft: '1px solid var(--border-light)', paddingLeft: '1.5rem', marginLeft: '0.5rem' }}>
+          Site Public
         </Link>
       </div>
     </nav>
